@@ -5,4 +5,3 @@
 5. Print the table to given number 
 6. Sum of given range 
 7. Print fabbnoci Series
-
