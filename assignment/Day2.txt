@@ -5,3 +5,5 @@
 5. Print the table to given number 
 6. Sum of given range 
 7. Print fabbnoci Series
+8. Swapping Two Number with and without taking third variable
+7. Need print the type of variable , id , instane operation

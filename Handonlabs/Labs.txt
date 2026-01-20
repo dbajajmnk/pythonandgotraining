@@ -1,0 +1,7 @@
+1. How to print your Introuction name,email,phone using multiple print function
+With Single Print function (With Varialbe without variable)
+2. Plan outing based season (Rain)
+3. While loop print all the elements of range
+4. Print the element of Tuple
+5. Print the element of Dictionary
+
