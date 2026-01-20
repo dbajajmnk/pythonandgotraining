@@ -1,1 +1,1 @@
-System.out.println(age);
+       System.out.println("Integer value: " + _myInt);
