@@ -1,0 +1,8 @@
+1. Create different variable with different values and print
+2. Check the Dynamic Typing feture of Python 
+3. Check Number is even or odd
+4. Print the Month Name based on number same for Week Days
+5. Print the table to given number 
+6. Sum of given range 
+7. Print fabbnoci Series
+
