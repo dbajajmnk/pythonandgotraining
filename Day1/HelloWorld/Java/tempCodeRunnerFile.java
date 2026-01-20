@@ -1,1 +1,1 @@
-       System.out.println("Integer value: " + _myInt);
+System.out.println(age instanceof Integer);
