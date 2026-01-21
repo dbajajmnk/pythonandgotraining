@@ -11,5 +11,7 @@ class Car:
  
  
 my_car = Car("Honda", "Civic type R", 2022)
+my_car.year = 2023  
+print(my_car.make)  
 print(my_car.wheels)  
 my_car.honk()      
