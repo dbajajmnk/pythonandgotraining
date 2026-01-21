@@ -17,3 +17,7 @@ user.speak()
 
 
 
+
+
+a = None
+print(a)

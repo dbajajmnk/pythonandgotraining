@@ -20,5 +20,29 @@ name = "deepakbajaj79@gmail.com"
 print(name)
 
 
+#Plan outing based season (Rain)
+season = "Rain"
+if season == "Rain":
+    print("Carry Umbrella") 
+else:
+    print("No need to carry umbrella")
+
+#While loop print 0 to 9
+count =0
+while count < 10:
+    print(count)
+    count=count+1
+
+##Print the element of Tuple
+myTuple = (1,2,3,4,5,"Hari","Smile","Ashish","Smile","Luxmi",True)
+for tupeleItem in myTuple:
+    print(tupeleItem)
+
+##List
+myList = [1,2,3,4,5,"Hari","Smile","Ashish","Smile","Luxmi",True]
+for  listItem in myList:
+    print(listItem)
+
+
 
 

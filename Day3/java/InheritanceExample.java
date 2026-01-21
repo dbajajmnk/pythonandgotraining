@@ -1,14 +1,12 @@
-class Car {
+class InheritanceExample {
     public static int wheels = 4;
     public String make;
     public String model;
     public int year;
-    Engine engine;
-    public Car(String make,String model,int year,Engine engine)
+    public Car(String make,String model,int year)
     {
         this.make = make;
         this.model = model;
-        this.engine = engine;
         this.year = year;
     }
         

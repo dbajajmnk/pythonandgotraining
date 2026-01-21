@@ -15,3 +15,5 @@ my_car.year = 2023
 print(my_car.make)  
 print(my_car.wheels)  
 my_car.honk()      
+print(type(10))
+print (10 is int)
