@@ -19,7 +19,7 @@ def basics_demo() -> None:
 
     # TUPLE: ordered, immutable (great for fixed "bundles" like coordinates)
     seat = ("Row A", 12)  # (row, seat_number)
-    print("Tuple (fixed bundle):", seat)
+    print("Tuple (fixed bundle):", seat[0])
 
     # SET: unique items only (fast membership checks)
     unique_items = set(shopping_list)
@@ -29,8 +29,21 @@ def basics_demo() -> None:
     # DICT: key -> value (fast lookup by key)
     prices = {"milk": 2.50, "bread": 1.25, "eggs": 3.10}
     prices["coffee"] = 8.99
-    print("Dict (key -> value):", prices)
+    # print("Dict (key -> value):", prices)
+    # print("Keys",prices.keys)
+    # print("Items",prices.values)
+    # print("Items",prices.items)
+    for item in prices:
+        print("item",item)
+
+    for key in prices.keys():
+        print("Key",key)
+
+    for value in prices.values():
+        print("Value",value)
+
     print("Price of eggs:", prices["eggs"])
+    
 
 
 # -------------------------

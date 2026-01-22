@@ -21,11 +21,15 @@ def basics_demo() -> None:
     nums = [1, 2, 3, 4, 5, 6]
 
     squares = [n * n for n in nums]
-    evens = [n for n in nums if n % 2 == 0]
+    evens = [n for n in nums if n % 2 != 0]
+    
     unique_mod_3 = {n % 3 for n in nums}
     as_text = {n: f"#{n}" for n in nums}
 
     print("Squares:", squares)
+    print(nums[0])
+    nums[0]=10
+    print(nums[0])
     print("Evens:", evens)
     print("Unique (n % 3):", unique_mod_3)
     print("Dict mapping:", as_text)
