@@ -80,7 +80,17 @@ while count<=10:
      print(num1*count)  
      count+=1 
 
-
+##
+list = [1,2,3,4,5,"Deepak"]
+print(list)
+tuple = (1,3,3,44,44)
+print(tuple)
+set = {1,1,2,2,3,4}
+print(set)
+map={"1":"A","2":"B"}
+print(map)
+print(type(map))
+print(id(map))
 
 
 

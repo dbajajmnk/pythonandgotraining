@@ -1,12 +1,12 @@
-def my_decorator(fn):
+def myDecoration(fn):
     def wrap():
-        print('Before')
+        print("Hello Decorator")
         fn()
-        print('After')
+        print("After Funciton call")
+
     return wrap
+@myDecoration
+def sampleOfDecorator():
+    print("This is my function")
 
-@my_decorator
-def hello():
-    print('Hello')
-
-hello()
+sampleOfDecorator()
