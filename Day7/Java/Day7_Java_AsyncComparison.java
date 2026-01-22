@@ -1,0 +1,1 @@
+class Day7_Java_AsyncComparison { public static void main(String[] a){ System.out.println("Async comparison");}}
