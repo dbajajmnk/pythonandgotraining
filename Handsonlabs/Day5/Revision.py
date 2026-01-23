@@ -18,17 +18,15 @@
 ## Classes 
 ## type,id,instancIn
 ## Comprehension
-from revision.Collection import printCollectionExample
-from revision.ControlFlow import ControlFlowFromPackage
-from revision.Function import printStudentInfo
-
-
-
+from revision import printCollectionExample
+from revision import ControlFlowFromPackage
+from revision import printStudentInfo
 
 ##
 printCollectionExample()
 ControlFlowFromPackage()
 printStudentInfo("Package Testing","Hello Friends")
+
 
 
 

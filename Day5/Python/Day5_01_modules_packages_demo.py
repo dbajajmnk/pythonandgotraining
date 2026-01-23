@@ -29,8 +29,8 @@ def main() -> None:
     # Import from modules (local package)
     # NOTE: This will work after you create the folder structure and run as a package.
     # See "How to run" instructions at bottom.
-    from office_utils.money import net_salary
-    from office_utils.textutils import normalize_employee_code
+    from office_utils import net_salary
+    from office_utils import normalize_employee_code
     from office_utils.reports.monthly import build_monthly_report
 
     emp_code = "  emp-  009  "
