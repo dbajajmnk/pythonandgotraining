@@ -1,0 +1,4 @@
+# Commands (not Go code)
+go mod init example.com/myapp
+go mod tidy
+go list -m all

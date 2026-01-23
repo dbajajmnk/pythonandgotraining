@@ -1,0 +1,7 @@
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("Compiled Go binary example")
+    // go build -> single native binary
+}
