@@ -1,0 +1,6 @@
+Set virtual env
+pyhton -m venv venv
+pip install "firstapi[all]"
+
+run 
+python -m uvicorn main:app --reload

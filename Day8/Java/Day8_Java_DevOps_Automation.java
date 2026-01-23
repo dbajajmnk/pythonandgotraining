@@ -1,1 +1,0 @@
-class DevOps{public static void main(String[]a){System.out.println("DevOps automation");}}
