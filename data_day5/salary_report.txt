@@ -1,0 +1,6 @@
+Salary Report
+============
+
+E001 | Asha | gross=100000 | tax=10% | net=87500
+E002 | Ravi | gross=85000 | tax=8% | net=75700
+E003 | Neha | gross=120000 | tax=12% | net=103100

@@ -6,13 +6,10 @@ def ControlFlowFromPackage():
 
     if num1 > num2:
         print("I am Working Fine23")
-
-    if num1>num2:
-        print("Number 1 is Greater",num1)
-    else:
-        print("Number 2 is Greater",num2)
-
-
+        if num1>num2:
+            print("Number 1 is Greater",num1)
+        else:
+            print("Number 2 is Greater",num2)
     if num1>num2:
         print("Number 1 is Greater",num1)
         if num1>num3:
