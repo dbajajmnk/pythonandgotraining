@@ -1,1 +1,0 @@
-print('Threading vs multiprocessing demo')

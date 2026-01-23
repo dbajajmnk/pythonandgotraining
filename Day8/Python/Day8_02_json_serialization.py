@@ -1,1 +1,0 @@
-print('JSON serialization demo')

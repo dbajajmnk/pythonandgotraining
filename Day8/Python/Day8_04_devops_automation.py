@@ -1,1 +1,0 @@
-print('DevOps automation demo')

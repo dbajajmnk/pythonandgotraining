@@ -1,1 +1,0 @@
-print('Java concurrency comparison')

@@ -1,1 +1,0 @@
-print('REST API demo placeholder')

@@ -1,1 +1,0 @@
-print('Pytest demo')
