@@ -1,0 +1,15 @@
+What is functools?
+Threading?
+Keys and their meaning 
+Availablity of 
+@contextmanager
+@logged
+@timed
+Lambda
+
+Treading 
+Concurrency
+Go
+factored import statement.
+Exposed Name in capital Letter
+

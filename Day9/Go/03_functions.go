@@ -5,7 +5,7 @@ func add(a int, b int) int {
     return a + b
 }
 
-func main() {
+func DemoFun() {
     result := add(3, 4)
     fmt.Println("Sum:", result)
 }

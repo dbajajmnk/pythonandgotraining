@@ -11,7 +11,7 @@ func createUser() *User {
     return &u
 }
 
-func main() {
+func HeapDemo() {
     user := createUser()
     fmt.Println(user.name)
 }
