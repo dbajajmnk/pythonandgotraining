@@ -105,9 +105,11 @@ def demo_lambda_basics() -> None:
 def lab_hr_filter_sort(employees: list[dict]) -> list[dict]:
     # STEP 1: filter active (predicate)
     active = list(filter(lambda e: e.get("active") is True, employees))
+    print("Active",active)
 
     # STEP 2: sort by netSalary desc (key function)
     sorted_active = sorted(active, key=lambda e: e.get("netSalary", 0), reverse=True)
+    print("Sorted Active",sorted_active)
 
     # STEP 3: return top 3
     return sorted_active[:3]
@@ -135,10 +137,10 @@ def main() -> None:
     for e in top3:
         print(f"- {e['name']}: {e['netSalary']}")
 
-    top3b = lab_hr_filter_sort_comprehension(employees)
-    print("\nLAB RESULT (list comprehension + sorted):")
-    for e in top3b:
-        print(f"- {e['name']}: {e['netSalary']}")
+    # top3b = lab_hr_filter_sort_comprehension(employees)
+    # print("\nLAB RESULT (list comprehension + sorted):")
+    # for e in top3b:
+    #     print(f"- {e['name']}: {e['netSalary']}")
 
 
 if __name__ == "__main__":

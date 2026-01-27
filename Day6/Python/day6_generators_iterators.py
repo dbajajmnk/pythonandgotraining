@@ -16,7 +16,7 @@ RUN
 python day6_generators_iterators.py
 """
 
-from __future__ import annotations
+
 
 # ============================================================
 # WHAT & WHY

@@ -105,7 +105,7 @@ def export_pdf(report_text: str) -> None:
     print("[EXPORT] (pretend) PDF exported")
 
 def main() -> None:
-    report = build_monthly_report("Asha", 100000)
+    report = build_monthly_report(employee_name="Asha",gross_salary=100000)
     print(report)
     export_pdf(report)
 
