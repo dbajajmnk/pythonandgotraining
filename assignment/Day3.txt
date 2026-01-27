@@ -8,3 +8,8 @@
 8. Swapping Two Number with and without taking third variable
 7. Need print the type of variable , id , instane operation
 //Use this with Functions and Classes 
+//Excepiton Handling 
+// Package and Module
+// Generator and Iterator
+//Lambda
+//Decorator 
