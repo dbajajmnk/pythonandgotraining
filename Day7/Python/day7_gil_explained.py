@@ -3,7 +3,7 @@ Day 7 Topic: GIL Explained (important for Java devs) — Theory + Lab (Runnable)
 ============================================================================
 
 Template followed:
-What & Why → Mind Map → Engineering → Java↔Python → Mistakes → Lab → Install/Run
+		hy → Mind Map → Engineering → Java↔Python → Mistakes → Lab → Install/Run
 
 ------------------------------------------------------------
 INSTALL
@@ -22,8 +22,6 @@ NOTE (IMPORTANT)
 - Most people mean CPython when they say "Python".
 - Timing results depend on your machine, OS, CPU cores, and Python build.
 """
-
-from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 from time import perf_counter
 
@@ -58,6 +56,7 @@ def cpu_work(iterations: int) -> int:
     for i in range(iterations):
         acc += (i * i) % 97
     return acc
+    
 
 
 def run_sequential(tasks: int, iterations: int) -> tuple[float, int]:
