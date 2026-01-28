@@ -13,3 +13,7 @@ Go
 factored import statement.
 Exposed Name in capital Letter
 
+Async/Await History (ES6)
+Promise 
+Call Back (Call Back Hell) 
+

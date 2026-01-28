@@ -66,7 +66,7 @@ def run_sequential(tasks: int, iterations: int) -> tuple[float, int]:
         total += cpu_work(iterations)
     return perf_counter() - start, total
 
-
+## Hari Priya
 def run_threads(tasks: int, iterations: int, workers: int) -> tuple[float, int]:
     start = perf_counter()
     total = 0
@@ -76,7 +76,7 @@ def run_threads(tasks: int, iterations: int, workers: int) -> tuple[float, int]:
             total += f.result()
     return perf_counter() - start, total
 
-
+## Harivardan
 def run_processes(tasks: int, iterations: int, workers: int) -> tuple[float, int]:
     start = perf_counter()
     total = 0
@@ -97,9 +97,11 @@ def main() -> None:
     t_seq, out1 = run_sequential(tasks, iterations)
     print(f"Sequential:      {t_seq:.3f}s  (checksum={out1})")
 
+    ## Ashish
     t_thr, out2 = run_threads(tasks, iterations, workers)
     print(f"ThreadPool({workers}): {t_thr:.3f}s  (checksum={out2})")
     print("WHY: CPU-bound threads often don't scale in CPython due to GIL.")
+
 
     # Multiprocessing needs the __main__ guard (this file has it).
     t_pro, out3 = run_processes(tasks, iterations, workers)

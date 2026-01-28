@@ -1,5 +1,5 @@
 from time import perf_counter
-from concurrent.futures import ThreadPoolExecutor,ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 def cpu_work(iterations: int) -> int:
     """
@@ -44,11 +44,18 @@ def run_processes(tasks: int, iterations: int, workers: int) -> tuple[float, int
 def main()->None:
     tasks = 4 
     iterations = 20_00_00
-    workers = 4
+    workrs = 4
     print("CPU Bound Bench Mark")
     t_seq , out1 = run_sequential(tasks,iterations)
     print(f"Sequencial : {t_seq:.3f}s Output : {out1}")
 
+    t_thr,out2 = run_threads(tasks,iterations,workrs)
+    print(f"ThreadPool({workrs}): {t_thr:.3f}s  (checksum={out2})")
+    print("WHY: CPU-bound threads often don't scale in CPython due to GIL.")
+
+    t_proc , out3 = run_processes(tasks,iterations,workrs)
+    print(f"ProcessPool({workrs}): {t_proc:.3f}s  (checksum={out3})")
+    print("WHY: CPU-bound processes scale well as they bypass the GIL.")    
 
 if __name__ == "__main__" :
    main()
