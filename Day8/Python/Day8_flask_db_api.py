@@ -42,6 +42,22 @@ from uuid import uuid4
 
 from flask import Flask, request, jsonify
 from sqlalchemy import create_engine, text
+##
+# Install required Packages 
+    # flask
+    # sqlalchemy 
+## Import 
+    #uuid
+    # Flask
+    # request
+    # jsonify, 
+    # create_engine,text
+## Coding implemantion
+    # DATABASE_URL
+    # Crete a engine for database operations
+    # Create app instance
+    # Route to perform Create and Read operation
+
 
 # ============================================================
 # DB CONFIG
