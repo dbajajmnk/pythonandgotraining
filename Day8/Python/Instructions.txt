@@ -1,6 +1,8 @@
 Set virtual env
 pyhton -m venv venv
-pip install "firstapi[all]"
+pip install "fastapi[all]"
 
 run 
+python -m uvicorn main:app --reload
+
 python -m uvicorn main:app --reload

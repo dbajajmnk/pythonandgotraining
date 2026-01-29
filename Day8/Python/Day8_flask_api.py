@@ -20,7 +20,7 @@ NOTE:
 import pytest
 
 # Import the Flask app object from the lab file.
-from day8_flask_rest_api import app as flask_app
+from Day8_flask_rest_api import app as flask_app
 
 
 @pytest.fixture()
