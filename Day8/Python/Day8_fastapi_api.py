@@ -17,7 +17,7 @@ NOTE:
 """
 
 from fastapi.testclient import TestClient
-from day8_fastapi_rest_api import app
+from main import app
 
 client = TestClient(app)
 

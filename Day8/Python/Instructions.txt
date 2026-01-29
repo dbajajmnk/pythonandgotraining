@@ -6,3 +6,6 @@ run
 python -m uvicorn main:app --reload
 
 python -m uvicorn main:app --reload
+
+pytest -q filepath (Day8_flask_api)
+pytest -q filepath (Day8_fastapi_api)
