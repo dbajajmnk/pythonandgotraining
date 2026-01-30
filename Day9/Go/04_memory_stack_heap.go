@@ -1,17 +1,17 @@
-package main
-import "fmt"
+// package main
+// import "fmt"
 
-type User struct {
-    name string
-}
+// type User struct {
+//     name string
+// }
 
-func createUser() *User {
-    // Escape analysis decides heap allocation
-    u := User{name: "Alice"}
-    return &u
-}
+// func createUser() *User {
+//     // Escape analysis decides heap allocation
+//     u := User{name: "Alice"}
+//     return &u
+// }
 
-func HeapDemo() {
-    user := createUser()
-    fmt.Println(user.name)
-}
+// func HeapDemo() {
+//     user := createUser()
+//     fmt.Println(user.name)
+// }

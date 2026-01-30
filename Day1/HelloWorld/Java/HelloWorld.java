@@ -1,6 +1,16 @@
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        String name ;
+        int myNumber;
+        System.out.println(name);
+        System.out.println(myNumber);
+        int one=10;
+        int two=20; 
+        int three=30;
+        int four=40;
+        int five=50;
+        
         int age = 20;
         if(age > 18){
             System.out.println("You are an adult.");
