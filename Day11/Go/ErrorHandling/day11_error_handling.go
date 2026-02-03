@@ -81,6 +81,7 @@ func runSafely() {
 		if r := recover(); r != nil {
 			fmt.Println("Recovered from panic:", r)
 		}
+		
 	}()
 	fmt.Println("About to panic...")
 	panic("unexpected system failure")
