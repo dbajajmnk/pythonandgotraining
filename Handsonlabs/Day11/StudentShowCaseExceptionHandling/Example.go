@@ -59,29 +59,28 @@ Discount
 func main() {
 	fmt.Println("Cart System")
 	paymentMode := paymentMode{
-		TransactionId: "",
+		TransactionId: "dsfdsadsasa",
 		Type:          "No Payment Type Seclected",
 	}
-	card := card{
-		PaymentMode: paymentMode,
-		CardNumber:  "1234-5678-9012-3456",
-	}
+	// card := card{
+	// 	PaymentMode: paymentMode,
+	// 	CardNumber:  "1234-5678-9012-3456",
+	// }
 	// upiMethod := upi{
 	// 	PaymentMode: paymentMode,
 	// 	UpiNumber:   "user@upi",
 
 	// }
-	// netBanking := netBanking{
-	// 	PaymentMode:   paymentMode,
-	// 	AccountNumber: "",
-
-	// }
+	netBanking := netBanking{
+		PaymentMode:   paymentMode,
+		AccountNumber: "8383838383838",
+	}
 	// if card.getType() == "Card" {
 	// 	err := card.validatePayment()
 	// 	fmt.Println("Card Payment Validation Error:", err)
 	// }
 
-	validateByType(card)
+	validateByType(netBanking)
 
 	// err := card.validatePayment()
 	// if err != nil {
@@ -211,9 +210,9 @@ func (PaymentMode netBanking) getType() string {
 // }
 
 func validateByType(validator validatePaymentMethod) error {
-	err:= validator.validateMethod()
-	if err !=nil{
-		fmt.Printf("Error in ValidationBy Type: %w",err)
+	err := validator.validateMethod()
+	if err != nil {
+		fmt.Printf("Error in ValidationBy Type: %w", err)
 	}
 	return err
 
