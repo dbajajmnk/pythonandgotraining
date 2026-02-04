@@ -20,7 +20,6 @@ func main(){
 	}()
 
 	for i:=0; i<5; i++ {
-		i:=i 
 		wg.Add(1)
 		go func(){
 			defer wg.Done()
@@ -28,9 +27,6 @@ func main(){
 		}()
 	}
 	wg.Wait()
-
-
-	
 }
 func sayHelloWorld(name string){
 	time.Sleep(100 * time.Millisecond)
