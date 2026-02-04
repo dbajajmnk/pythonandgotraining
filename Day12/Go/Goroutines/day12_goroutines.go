@@ -3,7 +3,6 @@
 // Run: go run day12_goroutines.go
 
 package main
-
 import (
 	"fmt"
 	"sync"
