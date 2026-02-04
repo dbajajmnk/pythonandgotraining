@@ -19,9 +19,9 @@ func main(){
 	for i:=0;i<2;i++ {
 		select {
 		case msg:= <-ch1:
-			fmt.Println("Message One Recieved",msg,value)
+			fmt.Println("Message One Recieved",msg)
 		case msg:= <-ch2:
-			fmt.Println("Message One Recieved",msg,value)
+			fmt.Println("Message One Recieved",msg)
 		}
 
 	}
