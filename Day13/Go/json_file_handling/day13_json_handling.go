@@ -28,7 +28,7 @@ func main() {
 		},
 	}
 
-	data, _ := json.MarshalIndent(user, "", "  ")
+	data, _ := json.MarshalIndent(user, "Hari", "      ")
 	fmt.Println(string(data))
 
 	f, _ := os.Create("user.json")

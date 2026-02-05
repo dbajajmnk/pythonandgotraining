@@ -48,7 +48,54 @@
      1. os.ReadFile(file)
      2. data and error
      3. string(data)
-##  Hari priya and Pavan
+##  JSON Handling  Hari priya and Pavan (Congratultions)
+     1. need to import encoding/json 
+     2. Create Two Stuct 
+     3. Do mapping or Seriralation
+     4. json.MarshalIndent
+        1. Strcut
+        2. prefix
+        3. Indent
+     5. Need to create file using os.Create(filename.json)
+     6. close with defer
+     7. json.NewEncoder(fileReference).Encode(struct with value)
+   
+## Logging Ahish and Mrudula
+   1. log 
+      1. SetPrefix
+      2. SetFlags
+         1. log.Ldatae
+         2. log.Ltime
+         3. log.Lmicroseconds 
+      3. Println() show logs on tremail using logger object
+   2. Putting logs in file 
+      1. Open file with 
+         1. crate
+         2. wrongly
+         3. append
+         4. 0664
+      2. close the file with defer f.close()
+      3. use this file as output for your logger
+         1. SetOutput(filereference)
+      4. Add log after that with Println
+   3. slog
+      1. Create a Handler
+         1. slog.NewJSONHandler
+            1. os.Stdout,
+            2. &slog.HanlderOptions{Leavel:slog.LevelInfo})
+   
+      2. Logger
+         1. slog.New(handler)
+      4. reqLogger
+         1. Attach a id
+            1. create id variabl
+         2. newObjectfor this
+            1. logger.With("",idvariable)
+      5. Put Error in logs
+      6. Warn
+      7. Info
+   
+
    
 
 
