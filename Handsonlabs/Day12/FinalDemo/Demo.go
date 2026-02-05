@@ -51,7 +51,9 @@ func printWrapper(data ...any) {
 	// newValue := append(data,"posfix")
 	
 	// fmt.Println(newValue...)
-	fmt.Println(append(append([]any{"WOW"}, data...), "posfix")...)
+
+	//  fmt.Println(append(append([]any{"WOW"}, data...), "posfix")...)
+	fmt.Println(append([]any{"WOW"}, data...)...)
 }
 
 // type BMW struct {
