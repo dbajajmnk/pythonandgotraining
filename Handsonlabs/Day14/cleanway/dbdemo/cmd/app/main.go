@@ -5,14 +5,31 @@ import (
 	"dbdemo/internal/data"
 	"fmt"
 	"dbdemo/pkg/util"
+	"encoding/json"
+	"log"
+	"net/http"
+	"database/sql"
 	_ "modernc.org/sqlite"
 )
 
+type Server struct {
+	db *sql.DB
+}
 func main() {
 	fmt.Println("Data Base Example")
 	db := data.DBConnection()
 
 	//data.ErrorHandling(err)
+	s := &Server{db: db}
+
+	mux := http.NewServeMux()
+	mux.HandleFunc("/health", s.health)
+
+	addr := ":8080"
+	log.Println("HTTP API running on http://localhost" + addr)
+	if err := http.ListenAndServe(addr, mux); err != nil {
+		log.Fatal(err)
+	}
 
 	defer db.Close()
 	CREATE_TABLE := `CREATE TABLE IF NOT EXISTS employee(
@@ -44,4 +61,17 @@ func main() {
 		fmt.Printf("Id :%d,Name : %s, Email:%s", id, name, email)
 	}
 
+}
+func (s *Server) health(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		writeJSON(w, http.StatusMethodNotAllowed, map[string]any{"error": "method not allowed"})
+		return
+	}
+	writeJSON(w, http.StatusOK, map[string]any{"status": "ok"})
+}
+
+func writeJSON(w http.ResponseWriter, status int, v any) {
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(status)
+	_ = json.NewEncoder(w).Encode(v)
 }
