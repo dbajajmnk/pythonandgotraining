@@ -1,33 +1,52 @@
+
 package main
 
 import (
-    "database/sql"
-    "fmt"
-    "log"
-    _ "github.com/mattn/go-sqlite3"
+	"database/sql"
+	"fmt"
+	"log"
+
+	_ "modernc.org/sqlite"
 )
 
 func main() {
-    db, err := sql.Open("sqlite3", "app.db")
-    if err != nil {
-        log.Fatal(err)
-    }
-    defer db.Close()
+	fmt.Println("=== Day 14: SQLite DB Connection (Pure Go) ===")
 
-    if err := db.Ping(); err != nil {
-        log.Fatal(err)
-    }
+	db, err := sql.Open("sqlite", "file:day14.db")
+	if err != nil {
+		log.Fatal("DB open error:", err)
+	}
+	defer db.Close()
 
-    db.Exec("CREATE TABLE IF NOT EXISTS users(id INTEGER, name TEXT)")
-    db.Exec("INSERT INTO users(id, name) VALUES(1, 'Alice')")
+	createTable := `
+	CREATE TABLE IF NOT EXISTS users (
+		id INTEGER PRIMARY KEY AUTOINCREMENT,
+		name TEXT,
+		email TEXT
+	);`
+	_, err = db.Exec(createTable)
+	if err != nil {
+		log.Fatal("Table creation failed:", err)
+	}
 
-    rows, _ := db.Query("SELECT id, name FROM users")
-    defer rows.Close()
+	_, err = db.Exec(`INSERT INTO users(name, email) VALUES (?, ?)`, "Deepak", "deepak@example.com")
+	if err != nil {
+		log.Fatal("Insert failed:", err)
+	}
 
-    for rows.Next() {
-        var id int
-        var name string
-        rows.Scan(&id, &name)
-        fmt.Println(id, name)
-    }
+	rows, err := db.Query(`SELECT id, name, email FROM users`)
+	if err != nil {
+		log.Fatal("Select failed:", err)
+	}
+	defer rows.Close()
+
+	fmt.Println("Users:")
+	for rows.Next() {
+		var id int
+		var name, email string
+		rows.Scan(&id, &name, &email)
+		fmt.Printf("ID=%d Name=%s Email=%s\n", id, name, email)
+	}
+
+	fmt.Println("=== DONE ===")
 }
