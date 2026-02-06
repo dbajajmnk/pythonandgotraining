@@ -36,7 +36,12 @@ func usersHandler(w http.ResponseWriter, r *http.Request) {
 
 func userByIDHandler(w http.ResponseWriter, r *http.Request) {
 	// Manual path param parsing: /users/{id}
-	parts := strings.Split(strings.Trim(r.URL.Path, "/"), "/")
+	urlPath := r.URL.Path
+	fmt.Println("Path",urlPath)
+	afterTrimPath :=strings.Trim(urlPath,"/")
+	fmt.Println("Aftr Trim Path",afterTrimPath)
+	parts := strings.Split(afterTrimPath, "/")
+	fmt.Println("Parts",parts)
 	if len(parts) != 2 {
 		http.NotFound(w, r)
 		return

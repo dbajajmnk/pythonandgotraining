@@ -13,11 +13,12 @@ import (
 type User struct {
 	ID   int    `json:"id"`
 	Name string `json:"name"`
+	Phone string `json:"phone`
 }
 
 var users = []User{
-	{ID: 1, Name: "Alice"},
-	{ID: 2, Name: "Bob"},
+	{ID: 1, Name: "Alice", Phone:"838388383883"},
+	{ID: 2, Name: "Bob", Phone :"234737737737"},
 }
 
 func main() {
@@ -25,14 +26,28 @@ func main() {
 
 	mux.HandleFunc("/health", healthHandler)
 	mux.HandleFunc("/users", usersHandler)
+	mux.HandleFunc("/print",printUserRequest)
 
 	log.Println("Server running on :8080")
-	//log.Fatal(http.ListenAndServe(":8080", loggingMiddleware(mux)))
+	log.Fatal(http.ListenAndServe(":8080", loggingMiddleware(mux)))
 }
 
 func healthHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("OK"))
+}
+
+func printUserRequest(w http.ResponseWriter, r *http.Request){
+	w.Header().Set("Content-Type", "application/json")
+    var u User
+		if err := json.NewDecoder(r.Body).Decode(&u); err != nil {
+			http.Error(w, "invalid json", http.StatusBadRequest)
+			return
+		}
+		w.WriteHeader(http.StatusCreated)
+		json.NewEncoder(w).Encode(u)
+	
+
 }
 
 func usersHandler(w http.ResponseWriter, r *http.Request) {

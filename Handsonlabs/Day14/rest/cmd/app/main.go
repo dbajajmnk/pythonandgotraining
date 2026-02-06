@@ -8,17 +8,10 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"rest/internal/data"
 )
 
-type User struct {
-	ID   int    `json:"id"`
-	Name string `json:"name"`
-}
 
-var users = []User{
-	{ID: 1, Name: "Alice"},
-	{ID: 2, Name: "Bob"},
-}
 
 func main() {
 	mux := http.NewServeMux()
