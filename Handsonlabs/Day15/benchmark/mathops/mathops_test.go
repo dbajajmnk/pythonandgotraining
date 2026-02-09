@@ -1,10 +1,15 @@
 // File: mathops_test.go
 package mathops
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func BenchmarkAdd(b *testing.B) {
+	fmt.Println("N ", b.N)
 	for i := 0; i < b.N; i++ {
+
 		_ = Add(10, 20)
 	}
 }
