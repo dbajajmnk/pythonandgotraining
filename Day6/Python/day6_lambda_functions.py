@@ -76,7 +76,7 @@ def demo_lambda_basics() -> None:
         {"name": "Nina", "netSalary": 80000, "active": False},
         {"name": "Irfan", "netSalary": 110000, "active": True},
     ]
-    by_salary_desc = sorted(employees, key=lambda e: e["netSalary"], reverse=True)
+    by_salary_desc = sorted(employees, key=lambda e: e["netSalary"], reverse=False)
     print("Top by salary:", [e["name"] for e in by_salary_desc])
 
 

@@ -27,7 +27,7 @@ def ensure_sample_files() -> None:
     DATA_DIR.mkdir(exist_ok=True)
 
     if not EMP_CSV.exists():
-        with EMP_CSV.open("w", newline="", encoding="utf-8") as f:
+        with EMP_CSV.open("w", ) as f:newline="", encoding="utf-8"
             writer = csv.writer(f)
             writer.writerow(["id", "name", "gross"])
             writer.writerow(["E001", "Asha", "100000"])

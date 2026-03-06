@@ -29,12 +29,14 @@ def main() -> None:
     # Import from modules (local package)
     # NOTE: This will work after you create the folder structure and run as a package.
     # See "How to run" instructions at bottom.
+    from office_utils import normalizeMyStuff
     from office_utils import net_salary
     from office_utils import normalize_employee_code
-    from office_utils.reports.monthly import build_monthly_report
+    from office_utils import build_monthly_report
 
     emp_code = "  emp-  009  "
     clean_code = normalize_employee_code(emp_code)
+    mystuff = normalizeMyStuff(emp_code)
     take_home = net_salary(gross=100000, tax_rate=0.10, deductions=2500)
 
     print("Clean employee code:", clean_code)

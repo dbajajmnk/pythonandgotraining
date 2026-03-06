@@ -81,7 +81,6 @@ def timed(fn):
 # 1) Build @logged and @timed decorators
 # 2) Apply to 3 business functions
 # 3) Ensure logs print even if exception occurs
-
 @logged
 @timed
 def compute_tax(gross_salary: float) -> float:
