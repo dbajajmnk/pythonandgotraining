@@ -47,7 +47,7 @@ from time import perf_counter
 # ============================================================
 # CPU-bound work (pure Python)
 # ============================================================
-def cpu_work(iterations: int) -> int:
+def cpu_work(iterations:int)->int:
     """
     CPU-heavy loop in pure Python.
     WHY: This stays under the GIL because it's Python bytecode.
