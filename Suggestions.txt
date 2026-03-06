@@ -1,0 +1,13 @@
+what we require:
+
+1. Theory discussion brief.
+	1.1 explain what we are going to cover under this topic
+	1.2 if possiple for the given topic create subtopics 
+	1.3 Analogy and the mind mapping to java
+	1.4 Can use PPT
+2. Live coding.
+	2.1 explaining syntax with simple example (small)
+		objective of 2.1 -- understandable implementation and framework of implementation
+	2.2 explain the concept and significance of significant line during the coding, not just what but why as well.
+3. Move to hands on lab and go through the code while mapping the live example with the hands on lab
+
