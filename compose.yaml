@@ -1,0 +1,6 @@
+services:
+  pythonandgotraining:
+    image: pythonandgotraining
+    build:
+      context: .
+      dockerfile: ./Dockerfile

@@ -375,7 +375,7 @@ Always cover:
 
 ### Mini-project 1: “Order Service”
 
-* CRUD + state transitions
+* CRUD + state transitionsvers
 * idempotent payment endpoint
 * tests for transitions
 
